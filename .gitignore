@@ -1,0 +1,6 @@
+.*
+/config/
+/doc/*
+!doc/plugins
+/vendor/
+!.editorconfig

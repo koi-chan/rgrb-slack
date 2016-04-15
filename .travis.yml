@@ -1,0 +1,22 @@
+sudo: false
+language: ruby
+cache: bundler
+bundler_args: --deployment
+rvm:
+  - 2.1.8
+  - 2.2.1
+  - 2.2.3
+  - 2.2.4
+  - 2.3.0
+notifications:
+  irc:
+    use_notice: true
+    channels: 
+      - 'irc.trpg.net#koi-chan'
+    on_success: always
+    on_failure: always
+    template:
+      - '%{repository_slug} #%{build_number} %{branch} - %{commit} -> %{result}'
+      - '変更履歴: %{compare_url}'
+      - 'ステータス: %{build_url}'
+  email: false
